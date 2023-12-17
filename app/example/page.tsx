@@ -4,7 +4,7 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
 export default function TextBox() {
-    const [value, setValue] = useState("test");
+    const [value, setValue] = useState("");
 
     return (
         <div className="bg-white p-2 rounded text-black">
