@@ -1,21 +1,16 @@
-"use client";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css"; // or 'quill.bubble.css' for bubble theme
-export interface IAppProps {
-    userText: string;
-    setUserText: (text: string) => void;
-}
+import { QuillBox } from "@/components/Quill/QuillBox";
+import { useState } from "react";
 
-export function QuillBox({ userText, setUserText }: IAppProps) {
+type Props = {};
+
+const Custom = (props: Props) => {
+    const [userText, setUserText] = useState("");
     return (
-        <div className="  w-full h-[320px] mb-10 bg-white text-black ">
-            <ReactQuill
-                theme="snow"
-                value={userText}
-                onChange={setUserText}
-                // style={{ height: "285px" }}
-                className=" rounded-lg h-[277px] "
-            />
-        </div>
+        <QuillBox
+            userText={userText}
+            setUserText={setUserText}
+        />
     );
-}
+};
+
+export default Custom;
