@@ -3,7 +3,7 @@ import { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
-export default function MyComponent() {
+export default function TextBox() {
     const [value, setValue] = useState("test");
 
     return (
